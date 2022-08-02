@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 function Content() {
   //   const tabs = ['posts', 'comments', 'albums'];
@@ -150,21 +150,41 @@ function Content() {
   //     </div>
   //   );
 
-  const [count, setCount] = useState(0);
+  //   =====================useRef 65=================
+  // const [count, setCount] = useState(60);
 
-  useLayoutEffect(() => {
-    if (count > 3) setCount(0);
-  }, [count]);
-  const handleRun = () => {
-    setCount(count + 1);
-  };
+  // const timerId = useRef();
+  // const prevCount = useRef();
 
-  return (
-    <div>
-      <h1>{count}</h1>
-      <button onClick={handleRun}>Run</button>
-    </div>
-  );
+  // useEffect(() => {
+  //   prevCount.current = count;
+  // }, [count]);
+
+  // const handleStart = () => {
+  //   timerId.current = setInterval(() => {
+  //     setCount((prevCount) => prevCount - 1);
+  //   }, 1000);
+  //   console.log(timerId.current);
+  // };
+  // const handleStop = () => {
+  //   clearInterval(timerId.current);
+  //   console.log(timerId.current);
+  // };
+  // console.log(count, prevCount.current);
+  // return (
+  //   <div style={{ padding: 30 }}>
+  //     <h1>{count}</h1>
+  //     <button onClick={handleStart}>Start</button>
+  //     <button onClick={handleStop}>Stop</button>
+  //   </div>
+  // );
+
+
+   //   =====================React.memo HOC =================
+
+
+
+   
 }
 
 export default Content;
