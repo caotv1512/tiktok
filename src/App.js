@@ -1,16 +1,7 @@
-import './App.css';
-import Content from './Content';
-import { useState } from 'react';
+import TodoApp from "./Todo"
 
 function App() {
-  const [show, setShow] = useState(false);
-
-  return (
-    <div style={{ padding: 30 }}>
-      <button onClick={() => setShow(!show)}>Toggle</button>
-      {show && <Content/>}
-    </div>
-  );
+  return <TodoApp/>
 }
 
-export default App;
+export default App
