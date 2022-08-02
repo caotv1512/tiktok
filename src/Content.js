@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { memo } from "react";
 
-function Content() {
+function Content({onIncrease}) {
   //   const tabs = ['posts', 'comments', 'albums'];
   //   const [title, setTitle] = useState('');
   //   const [posts, setPost] = useState([]);
@@ -179,12 +179,20 @@ function Content() {
   //   </div>
   // );
 
+  //   =====================React.memo HOC =================
 
-   //   =====================React.memo HOC =================
-
-
-
-   
+  // const [count, setCount] = useState(0);
+  // const increase = () => {
+  //   setCount(count + 1);
+  // };
+  console.log(222222222);
+  return (
+    <div style={{}}>
+      <p>Hello Anh EM</p>
+      {/* <button onClick={increase}>Click me</button> */}
+      <button onClick={onIncrease}>Click me</button>
+    </div>
+  );
 }
 
-export default Content;
+export default memo(Content);
